@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 type SeoFormProps = {
-  onAnalyze: () => void;
+  onAnalyze?: () => void;
 };
 
 export default function SeoForm({ onAnalyze }: SeoFormProps) {
@@ -20,13 +20,20 @@ export default function SeoForm({ onAnalyze }: SeoFormProps) {
 
     setTimeout(() => {
       setLoading(false);
-      onAnalyze();
+
+      if (onAnalyze) {
+        onAnalyze();
+      } else {
+        alert("SEO analysis completed successfully!");
+      }
     }, 1500);
   };
 
   return (
     <div className="bg-white rounded-xl shadow-md p-6 mb-8">
-      <h2 className="text-2xl font-bold mb-4">Analyze Website</h2>
+      <h2 className="text-2xl font-bold text-slate-900 mb-4">
+        Analyze Website
+      </h2>
 
       <div className="flex flex-col md:flex-row gap-4">
         <input
@@ -34,13 +41,13 @@ export default function SeoForm({ onAnalyze }: SeoFormProps) {
           placeholder="https://example.com"
           value={url}
           onChange={(e) => setUrl(e.target.value)}
-          className="flex-1 border rounded-lg px-4 py-3"
+          className="flex-1 border border-gray-300 rounded-lg px-4 py-3"
         />
 
         <button
           onClick={handleAnalyze}
           disabled={loading}
-          className="bg-blue-600 text-white px-6 py-3 rounded-lg"
+          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition"
         >
           {loading ? "Analyzing..." : "Analyze"}
         </button>
