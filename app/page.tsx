@@ -4,7 +4,6 @@ import SeoForm from "@/components/dashboard/SeoForm";
 import StatsCard from "@/components/dashboard/StatsCard";
 import RecentReports from "@/components/dashboard/RecentReports";
 import { mockSeoReport } from "@/lib/mockData";
-
 export default function Home() {
   return (
     <Layout>
