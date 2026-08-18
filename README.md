@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AI SEO Dashboard
 
-## Getting Started
+An AI-powered SEO audit dashboard built with Next.js, React, Tailwind CSS, and Google Gemini.
 
-First, run the development server:
+The application allows users to analyze a website URL, view SEO audit results, identify SEO issues, and receive AI-powered recommendations based on the actual audit report.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Live Demo
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[Open AI SEO Dashboard](YOUR_VERCEL_URL)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## GitHub Repository
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+https://github.com/Jbheemeswar/seo-audit-dashboard-next
 
-## Learn More
+## Features
 
-To learn more about Next.js, take a look at the following resources:
+- Website URL SEO analysis
+- SEO score calculation
+- SEO issue detection
+- Critical, high, medium, and low issue classification
+- SEO details including:
+  - Page title
+  - Meta description
+  - H1 count
+  - Image count
+  - Images without alt text
+  - Viewport
+  - Canonical URL
+- AI-powered SEO recommendations
+- Google Gemini integration
+- Responsive dashboard interface
+- Accessible React components
+- Modal, Tabs, and Disclosure components
+- Error handling for AI service failures
+- Production deployment with Vercel
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## AI SEO Advisor
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The AI SEO Advisor uses Google Gemini to analyze the generated SEO report and provide practical recommendations.
 
-## Deploy on Vercel
+The AI prompt is designed to:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Use only information from the SEO report
+- Avoid inventing SEO problems
+- Prioritize important improvements
+- Explain recommendations clearly
+- Provide an overall assessment
+- Provide prioritized recommendations
+- Provide an action plan
+- Suggest next steps
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technology Stack
+
+### Frontend
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+
+### AI
+
+- Google Gemini
+- `@google/genai`
+
+### UI
+
+- shadcn/ui
+- Base UI
+- Lucide React
+
+### Deployment
+
+- Vercel
+
+### Version Control
+
+- Git
+- GitHub
+
+## Application Flow
+
+```text
+User enters website URL
+        ↓
+SEO Analysis API
+        ↓
+Website SEO audit
+        ↓
+SEO Report
+        ↓
+AI SEO Advisor
+        ↓
+Google Gemini
+        ↓
+AI-powered recommendations
